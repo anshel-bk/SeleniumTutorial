@@ -46,7 +46,7 @@ for i in range(15):
     try:
         do_magic(link,path)
         print(f"Итерация номер {i+1}")
-        time.sleep(3)
+        time.sleep(2)
     except Exception as ex:
         print(ex)
         break
