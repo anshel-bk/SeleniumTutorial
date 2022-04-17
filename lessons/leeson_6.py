@@ -23,7 +23,7 @@ def do_magic(link,path):
         browser = webdriver.Chrome(executable_path=path)
         #browser.implicitly_wait(5)
         browser.get(link)
-        browser.implicitly_wait(2)
+        browser.implicitly_wait(4)
         wait = WebDriverWait(browser, 10).until(
             EC.text_to_be_present_in_element((By.ID, "price",),"$100")
         )
