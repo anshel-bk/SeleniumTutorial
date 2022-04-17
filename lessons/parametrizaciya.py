@@ -20,7 +20,6 @@ class TestParameters():
     @pytest.fixture(scope="class")
     def browser(self):
         print("\nstart browser for test..")
-        path = "C:\\chromedriver.exe"
         browser = webdriver.Chrome(executable_path=path)
         yield browser
         print("\nquit browser..")
