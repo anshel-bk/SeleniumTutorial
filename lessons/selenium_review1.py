@@ -22,8 +22,8 @@ try:
         first_name.send_keys("Ivan")
         last_name = browser.find_element_by_css_selector("div.first_block > div.form-group.second_class > input")
         last_name.send_keys("Kozlov")
-    except NoSuchElementException: # перехватываем исключение если текст выводится значит оно поймано
-        print("Тест падает с ошибкой как и запланировано")
+    except NoSuchElementException as ex: # перехватываем исключение если текст выводится значит оно поймано
+        print(f"Тест падает с ошибкой {ex} как и запланировано")
 finally:
     # успеваем скопировать код за 30 секунд
     time.sleep(2)
